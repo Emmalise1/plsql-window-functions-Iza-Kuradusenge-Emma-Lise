@@ -1,2 +1,26 @@
 # plsql-window-functions-Iza-Kuradusenge-Emma-Lise
 PL/SQL Window Functions Assignment — AUCA 2025.
+ ## Step 1: Problem Definition
+**Business Context:** TuneWave, a regional music streaming platform - Content Strategy Team.
+
+**Data challenge:** From January through December 2024, TuneWave logged millions of song plays, however, it does not have a detailed understanding of the top genres and artists in each region, or the monthly variation in listening behaviors. Also, user retention is an issue as many listeners stop engaging with the service after a few months.
+
+**Expected outcome:** Identify the top 5 artists for each region and quarter, calculate cumulative monthly streaming totals, recognize month-over-month changes in active listeners, and classify listeners into quartiles based on their engagement behavior to improve playlist development and targeted campaigns for promotions.
+## Step 2: Success Criteria
+
+We will use the following 5 measurable goals to guide our PL/SQL window function analysis for TuneWave:
+
+1. **Top 5 artists per region and quarter → RANK()**  
+   Identify the artists that have the highest streaming in each of the regions each quarter to know which content to promote, and curate playlists with.
+
+2. **Running monthly streaming totals → SUM() OVER()**  
+   Determine how many streams each region or artist has in cumulative total over the months for each quarter to see trends and growth.
+
+3. **Monthly active users month-over-month → LAG()/LEAD()**  
+   Queue listening counts month-over-month to identify growth, decline, or a seasonal pattern.
+
+4. **Listener engagement quartiles → NTILE(4)**  
+   Cluster listeners into 4 groups based on the total streams each year to find targeted campaigns around top listeners and low engagement.
+
+5. **3-month moving averages of streams per artist → AVG() OVER()**  
+   Calculate rolling 3-month averages to quantify the ups and downs, and to find trend data on streams per artist.
