@@ -45,7 +45,7 @@ We implemented four categories of PL/SQL window functions in Oracle SQL Develope
 
 ### 1) Ranking — `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `PERCENT_RANK()`
 
-**Query (file: `sql/03-ranking.sql`):**
+**Query (Ranking Functions):**
 ```sql
  Ranking listeners by total streaming duration (descending)
 SELECT
