@@ -64,7 +64,9 @@ FROM (
 ) t
 ORDER BY t.total_duration DESC; 
 **Screenshot:**  
-![Ranking Results]()
+![Ranking Results](https://github.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/blob/main/Ranking.PNG?raw=true)
+** Interpretation **
+This query computes total streaming duration per listener and ranks them. ROW_NUMBER gives a strict ordering; RANK allows ties (with gaps); DENSE_RANK compresses gaps; PERCENT_RANK shows relative standing. Use these results to identify top listeners for rewards or VIP programs.
 
 
 
