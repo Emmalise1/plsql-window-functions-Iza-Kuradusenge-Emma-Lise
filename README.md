@@ -68,8 +68,40 @@ ORDER BY t.total_duration DESC;
 **Screenshot:**  
 ![Ranking Results](https://github.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/blob/main/Ranking.PNG?raw=true)
 
-** Interpretation **
-This query computes total streaming duration per listener and ranks them. ROW_NUMBER gives a strict ordering; RANK allows ties (with gaps); DENSE_RANK compresses gaps; PERCENT_RANK shows relative standing. Use these results to identify top listeners for rewards or VIP programs.
+**Interpretation**
+This query computes total streaming duration per listener and ranks them. ROW_NUMBER gives a strict ordering; RANK allows ties (with gaps); DENSE_RANK compresses gaps; PERCENT_RANK shows relative standing. You can use these results for identifying your top listeners for rewards, or a VIP program. 
+### Aggregate — SUM(), AVG(), MIN(), MAX() (ROWS vs RANGE)
+**SQL Query (Running Totals & Moving Average):**
+WITH monthly AS (
+  SELECT TRUNC(stream_date,'MM') AS month,
+         SUM(duration) AS monthly_total
+  FROM streams
+  GROUP BY TRUNC(stream_date,'MM')
+)
+SELECT month,
+       monthly_total,
+       SUM(monthly_total) OVER (
+         ORDER BY month
+         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+       ) AS running_total_rows,
+       SUM(monthly_total) OVER (
+         ORDER BY month
+         RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+       ) AS running_total_range,
+       AVG(monthly_total) OVER (
+         ORDER BY month
+         ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+       ) AS moving_avg_3m
+FROM monthly
+ORDER BY month;
+```
+**Screenshot:**
+![Aggregate Results](
+
+
+
+
+
 
 
 
