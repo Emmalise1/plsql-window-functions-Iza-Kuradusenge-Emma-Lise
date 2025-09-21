@@ -37,4 +37,4 @@ We designed three related tables for the TuneWave music streaming platform.
 ---
 
 ### ER Diagram
-![ER Diagram](images/er_diagram.png)
+![ER Diagram](https://raw.githubusercontent.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/4eafdad53a9e71bcba39df65d908fa7820329d5a/images/plsql-window-functions-Iza%20Kuradusenge-Emma%20Lise-Er-diagram.PNG)
