@@ -64,6 +64,6 @@ FROM (
 ) t
 ORDER BY t.total_duration DESC;
 **Screenshot:**  
-![Ranking Results](images/04-ranking.png)
+![Ranking Results](**Screenshot:**  )
 
 
