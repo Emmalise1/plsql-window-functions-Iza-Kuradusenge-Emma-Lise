@@ -64,7 +64,7 @@ FROM (
 ) t
 ORDER BY t.total_duration DESC; 
 **Screenshot:**  
-![Ranking Results](images/Ranking%20(ROW_NUMBER%2C%20RANK%2C%20DENSE_RANK%2C%20PERCENT_RANK).PNG)
+![Ranking Results](https://github.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/blob/main/Ranking.PNG?raw=true)
 
 
 
