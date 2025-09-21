@@ -157,27 +157,16 @@ ORDER BY t.total_duration DESC;
 **Interpretation**
 This segregates listeners into quartiles based on their total time streamed using NTILE(4). CUME_DIST calculates the proportion of listeners at or below a certain total time streamed. This is beneficial in identifying top listeners as well as those users who engage with your content the least in order to target them with messages.
 
-# Step 5: GitHub Repository Structure
+# Step 5:Results Analysis
 
-plsql-window-functions-[Emma Lise]-[Iza Kuradusenge]/
-│
-├── scripts/              # SQL queries
-│   ├── ranking.sql
-│   ├── aggregate.sql
-│   ├── navigation.sql
-│   └── distribution.sql
-│
-├── images/               # Screenshots
-│   ├── ER_Diagram.png
-│   ├── ranking.png
-│   ├── aggregate.png
-│   ├── navigation.png
-│   └── distribution.png
-│
-├── README.md             # Project report
-└── LICENSE (optional)
+**Descriptive (What happened?)**
+The analysis shows that a small number of artists monopolized streams across all regions, while a significant number (around 20%) showed lower but consistent engagement levels. Monthly aggregate number of streams showed seasonal patterns with large increases during holidays and weekends. Listener segmenting revealed that only about 25% of users contributed to the vast majority of streams, while considerably more streamed sporadically. 
 
+**Diagnostic (Why?)**
+The concentration of streams across a small number of artists show that dedicated fans who stream their artist preferred rarely explore other artists, despite their potential engagement. Seasonal spikes likely can be explained by lifestyle patterns (holidays, breaks from school, evenings/weekends) where users are simply exposed to or engage more. Likely causes for the lack of user activity in lower quartiles is partially due to a portion of those users moving from engagement to a lack of interest or task saturation due possibly to no personalization or lack of attention to non-trending artists and possibly even access to diverse catalogs. 
 
+**Prescriptive (What next?)**
+TuneWave should develop a series of targeted campaigns based on listener segments, offer exclusive rewards to its top listeners and work on re-engaging those in the low engagement segment by introducing playlists or a form of notifications based on their listening habits. Expanding the focus of the platform to incorporate regional/local talent can also improve engagement in the identified regions. Finally, also monitor the latter recommendations with the metrics at least monthly and questionable data inputs with window functions. Keeping a close eye on metrics with a goal to adapt to new behaviors is important for variation in listening behaviors. 
 
 
 
