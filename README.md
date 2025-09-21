@@ -192,7 +192,7 @@ TuneWave should develop a series of targeted campaigns based on listener segment
 
 **Statement of Originality**
 
-All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation.
+All sources were properly cited. Implementations and analysis represent original work. No AI generated content was copied without attribution or adaptation.
 
 
 
