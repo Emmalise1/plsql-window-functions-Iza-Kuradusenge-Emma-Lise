@@ -128,7 +128,36 @@ FROM monthly
 ORDER BY month;
 ```
 **Screenshot:**
-![Navigation Results](
+![Navigation Results](https://raw.githubusercontent.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/2ca5845517775b101c322c58a8f0e5bd3f4d2d4b/navigation.PNG)
+
+**Interpretation**
+This query uses the LAG function to obtain the previous month's amount and calculates month-over-month growth. A positive amount indicates streaming growth and a negative amount indicates decline. Similarly, LEAD may also be used to look at the next month in order to forecast.
+
+### Distribution — NTILE(4), CUME_DIST() (segmentation)
+**SQL Query (Listener Segmentation):**
+```sql
+SELECT t.listener_id,
+       t.name,
+       t.total_duration,
+       NTILE(4) OVER (ORDER BY t.total_duration DESC) AS quartile,
+       CUME_DIST() OVER (ORDER BY t.total_duration DESC) AS cume_dist
+FROM (
+  SELECT l.listener_id,
+         l.name,
+         SUM(s.duration) AS total_duration
+  FROM listeners l
+  JOIN streams s ON l.listener_id = s.listener_id
+  GROUP BY l.listener_id, l.name
+) t
+ORDER BY t.total_duration DESC;
+```
+**Screenshot:**
+![Distribution Results](
+
+
+
+
+
 
 
 
