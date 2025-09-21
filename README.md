@@ -43,7 +43,7 @@ We implemented four categories of PL/SQL window functions in Oracle SQL Develope
 
 ---
 
-### 1) Ranking — `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `PERCENT_RANK()`
+### Ranking — `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `PERCENT_RANK()`
 
 **Query (Ranking Functions):**
 ```sql
@@ -191,6 +191,7 @@ TuneWave should develop a series of targeted campaigns based on listener segment
 10.Harvard Business Review — How Analytics and AI Are Driving Business Value — (https://hbr.org/2022/02/how-analytics-and-ai-are-driving-business-value)
 
 **Statement of Originality**
+
 All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation.
 
 
