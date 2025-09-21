@@ -64,7 +64,8 @@ FROM (
 ) t
 ORDER BY t.total_duration DESC; 
 **Screenshot:**  
-![Ranking Results](https://github.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/blob/main/Ranking.PNG?raw=true)
+![Ranking Results]()
+
 
 
 
