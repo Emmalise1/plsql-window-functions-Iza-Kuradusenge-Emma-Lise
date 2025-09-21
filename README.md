@@ -157,6 +157,27 @@ ORDER BY t.total_duration DESC;
 **Interpretation**
 This segregates listeners into quartiles based on their total time streamed using NTILE(4). CUME_DIST calculates the proportion of listeners at or below a certain total time streamed. This is beneficial in identifying top listeners as well as those users who engage with your content the least in order to target them with messages.
 
+# Step 5: GitHub Repository Structure
+
+plsql-window-functions-[Emma Lise]-[Iza Kuradusenge]/
+│
+├── scripts/              # SQL queries
+│   ├── ranking.sql
+│   ├── aggregate.sql
+│   ├── navigation.sql
+│   └── distribution.sql
+│
+├── images/               # Screenshots
+│   ├── ER_Diagram.png
+│   ├── ranking.png
+│   ├── aggregate.png
+│   ├── navigation.png
+│   └── distribution.png
+│
+├── README.md             # Project report
+└── LICENSE (optional)
+
+
 
 
 
