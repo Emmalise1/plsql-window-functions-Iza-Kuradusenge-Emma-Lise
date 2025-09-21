@@ -166,7 +166,29 @@ The analysis shows that a small number of artists monopolized streams across all
 The concentration of streams across a small number of artists show that dedicated fans who stream their artist preferred rarely explore other artists, despite their potential engagement. Seasonal spikes likely can be explained by lifestyle patterns (holidays, breaks from school, evenings/weekends) where users are simply exposed to or engage more. Likely causes for the lack of user activity in lower quartiles is partially due to a portion of those users moving from engagement to a lack of interest or task saturation due possibly to no personalization or lack of attention to non-trending artists and possibly even access to diverse catalogs. 
 
 **Prescriptive (What next?)**
-TuneWave should develop a series of targeted campaigns based on listener segments, offer exclusive rewards to its top listeners and work on re-engaging those in the low engagement segment by introducing playlists or a form of notifications based on their listening habits. Expanding the focus of the platform to incorporate regional/local talent can also improve engagement in the identified regions. Finally, also monitor the latter recommendations with the metrics at least monthly and questionable data inputs with window functions. Keeping a close eye on metrics with a goal to adapt to new behaviors is important for variation in listening behaviors. 
+TuneWave should develop a series of targeted campaigns based on listener segments, offer exclusive rewards to its top listeners and work on re-engaging those in the low engagement segment by introducing playlists or a form of notifications based on their listening habits. Expanding the focus of the platform to incorporate regional/local talent can also improve engagement in the identified regions. Finally, also monitor the latter recommendations with the metrics at least monthly and questionable data inputs with window functions. Keeping a close eye on metrics with a goal to adapt to new behaviors is important for variation in listening behaviors.
+
+# Step 6: References
+
+1. Oracle — SQL Language Reference: Analytic Functions — (https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Analytic-Functions.html)
+
+Oracle — Window Functions Concepts — Link
+
+Oracle — Database SQL Tuning Guide — Link
+
+Mode Analytics — Introduction to Window Functions — Link
+
+PostgreSQL Docs — Window Functions — Link
+
+SQL Shack — Practical Examples of Window Functions — Link
+
+GeeksforGeeks — SQL | Window Functions — Link
+
+Redgate — How to Use ROW_NUMBER, RANK, DENSE_RANK — Link
+
+McKinsey & Co. — The Business Value of Data Analytics — Link
+
+Harvard Business Review — How Analytics and AI Are Driving Business Value — Link
 
 
 
