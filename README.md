@@ -47,7 +47,7 @@ We implemented four categories of PL/SQL window functions in Oracle SQL Develope
 
 **Query (file: `sql/03-ranking.sql`):**
 ```sql
--- Rank listeners by total streaming duration (descending)
+ Ranking listeners by total streaming duration (descending)
 SELECT
   t.listener_id,
   t.name,
@@ -62,8 +62,7 @@ FROM (
   JOIN streams s ON l.listener_id = s.listener_id
   GROUP BY l.listener_id, l.name
 ) t
-ORDER BY t.total_duration DESC;
-**Screenshot:**  
-![Ranking Results](**Screenshot:**  )
+ORDER BY t.total_duration DESC; 
+![Ranking Results](https://raw.githubusercontent.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/a7773c79d917be599b7b1264ea92ebd18e30cfca/images/Aggregate%20windows%20(SUM%2C%20AVG%2C%20MIN%2C%20MAX)%20%E2%80%94%20show%20ROWS%20vs%20RANGE.PNG)
 
 
