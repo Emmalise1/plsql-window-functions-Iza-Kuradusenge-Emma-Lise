@@ -35,4 +35,35 @@ We designed three related tables for the TuneWave music streaming platform. The 
 | streams    | Streaming records  | stream_id (PK), listener_id (FK → listeners), song_id (FK → songs), stream_date, duration | 3001, 1001, 2001, 2025-01-15, 180 |
 
 ### ER Diagram
-![ER Diagram](https://raw.githubusercontent.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/4eafdad53a9e71bcba39df65d908fa7820329d5a/images/plsql-window-functions-Iza%20Kuradusenge-Emma%20Lise-Er-diagram.PNG)
+![ER Diagram](https://raw.githubusercontent.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/4eafdad53a9e71bcba39df65d908fa7820329d5a/images/plsql-window-functions-Iza%20Kuradusenge-Emma%20Lise-Er-diagram.PNG) 
+
+# Step 4: Window Functions Implementation 
+
+We implemented four categories of PL/SQL window functions in Oracle SQL Developer. Each section below shows the **query**, a **screenshot** of results, and a 2–3 sentence **interpretation**.
+
+---
+
+### 1) Ranking — `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `PERCENT_RANK()`
+
+**Query (file: `sql/03-ranking.sql`):**
+```sql
+-- Rank listeners by total streaming duration (descending)
+SELECT
+  t.listener_id,
+  t.name,
+  t.total_duration,
+  ROW_NUMBER()   OVER (ORDER BY t.total_duration DESC) AS row_num,
+  RANK()         OVER (ORDER BY t.total_duration DESC) AS rnk,
+  DENSE_RANK()   OVER (ORDER BY t.total_duration DESC) AS dense_rnk,
+  PERCENT_RANK() OVER (ORDER BY t.total_duration DESC) AS pct_rank
+FROM (
+  SELECT l.listener_id, l.name, SUM(s.duration) AS total_duration
+  FROM listeners l
+  JOIN streams s ON l.listener_id = s.listener_id
+  GROUP BY l.listener_id, l.name
+) t
+ORDER BY t.total_duration DESC;
+**Screenshot:**  
+![Ranking Results](images/04-ranking.png)
+
+
