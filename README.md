@@ -26,15 +26,13 @@ We will use the following 5 measurable goals to guide our PL/SQL window function
    Calculate rolling 3-month averages to quantify the ups and downs, and to find trend data on streams per artist.
    ## Step 3: Database Schema
 
-We designed three related tables for the TuneWave music streaming platform.  
+We designed three related tables for the TuneWave music streaming platform. The tables are connected by foreign keys, ensuring referential integrity.
 
-| Table Name | Purpose          | Key Columns                                    | Example Row                             |
-|------------|------------------|-----------------------------------------------|-----------------------------------------|
-| listeners  | Customer info    | listener_id (PK), name, region                | 1001, Alice Uwase, Kigali               |
-| songs      | Song catalog     | song_id (PK), title, artist, genre            | 2001, Umutima, The Ben, Afrobeat        |
-| streams    | Streaming records| stream_id (PK), listener_id (FK), song_id (FK), stream_date, duration | 3001, 1001, 2001, 2025-01-15, 180 |
-
----
+| Table Name | Purpose            | Key Columns                                                      | Example Row                                     |
+|------------|--------------------|------------------------------------------------------------------|------------------------------------------------|
+| listeners  | Customer info      | listener_id (PK), name, region                                   | 1001, Alice Uwase, Kigali                      |
+| songs      | Song catalog       | song_id (PK), title, artist, genre                               | 2001, Umutima, The Ben, Afrobeat               |
+| streams    | Streaming records  | stream_id (PK), listener_id (FK → listeners), song_id (FK → songs), stream_date, duration | 3001, 1001, 2001, 2025-01-15, 180 |
 
 ### ER Diagram
 ![ER Diagram](https://raw.githubusercontent.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/4eafdad53a9e71bcba39df65d908fa7820329d5a/images/plsql-window-functions-Iza%20Kuradusenge-Emma%20Lise-Er-diagram.PNG)
