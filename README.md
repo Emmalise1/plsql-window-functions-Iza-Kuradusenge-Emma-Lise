@@ -172,23 +172,28 @@ TuneWave should develop a series of targeted campaigns based on listener segment
 
 1. Oracle — SQL Language Reference: Analytic Functions — (https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Analytic-Functions.html)
 
-Oracle — Window Functions Concepts — Link
+2. Oracle — Window Functions Concepts — (https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/SQL-Analytic-Functions.html)
 
-Oracle — Database SQL Tuning Guide — Link
+3. Oracle — Database SQL Tuning Guide — (https://docs.oracle.com/en/database/oracle/oracle-database/19/tgsql/index.html)
 
-Mode Analytics — Introduction to Window Functions — Link
+4. Mode Analytics — Introduction to Window Functions — (https://mode.com/sql-tutorial/sql-window-functions/)
 
-PostgreSQL Docs — Window Functions — Link
+5. PostgreSQL Docs — Window Functions — (https://www.postgresql.org/docs/current/tutorial-window.html)
 
-SQL Shack — Practical Examples of Window Functions — Link
+6. SQL Shack — Practical Examples of Window Functions — (https://www.sqlshack.com/sql-window-functions-overview-and-examples/)
 
-GeeksforGeeks — SQL | Window Functions — Link
+7. GeeksforGeeks — SQL | Window Functions — (https://www.geeksforgeeks.org/sql-window-functions/)
 
-Redgate — How to Use ROW_NUMBER, RANK, DENSE_RANK — Link
+8. Redgate — How to Use ROW_NUMBER, RANK, DENSE_RANK — (https://www.red-gate.com/simple-talk/databases/sql-server/t-sql-programming-sql-server/using-sql-window-functions/)
 
-McKinsey & Co. — The Business Value of Data Analytics — Link
+9. McKinsey & Co. — The Business Value of Data Analytics — (https://www.mckinsey.com/business-functions/mckinsey-analytics/our-insights/the-age-of-analytics-competing-in-a-data-driven-world)
 
-Harvard Business Review — How Analytics and AI Are Driving Business Value — Link
+10.Harvard Business Review — How Analytics and AI Are Driving Business Value — (https://hbr.org/2022/02/how-analytics-and-ai-are-driving-business-value)
+
+**Statement of Originality**
+All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation.
+
+
 
 
 
