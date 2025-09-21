@@ -99,6 +99,45 @@ ORDER BY month;
 **Screenshot:**
 ![Aggregate Results](https://github.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/blob/main/aggregate.PNG?raw=true)
 
+**Interpretation**
+This query provides total monthly figures, cumulative running totals, and a 3-month moving average. ROWS counts specific physical rows while RANGE groups rows according to values. The moving average presents general trends in streaming.
+
+### Navigation — LAG(), LEAD() (growth % calculations)
+**SQL Query (Month-over-Month Growth):**
+```sql
+WITH monthly AS (
+  SELECT TRUNC(stream_date,'MM') AS month,
+         SUM(duration) AS monthly_total
+  FROM streams
+  GROUP BY TRUNC(stream_date,'MM')
+)
+SELECT month,
+       monthly_total,
+       LAG(monthly_total) OVER (ORDER BY month) AS prev_month_total,
+       LEAD(monthly_total) OVER (ORDER BY month) AS next_month_total,
+       CASE
+         WHEN LAG(monthly_total) OVER (ORDER BY month) IS NULL THEN NULL
+         WHEN LAG(monthly_total) OVER (ORDER BY month) = 0 THEN NULL
+         ELSE ROUND(
+           (monthly_total - LAG(monthly_total) OVER (ORDER BY month)) * 100
+           / LAG(monthly_total) OVER (ORDER BY month),
+           2
+         )
+       END AS mom_pct_change
+FROM monthly
+ORDER BY month;
+```
+**Screenshot:**
+![Navigation Results](
+
+
+
+
+
+
+
+
+
 
 
 
