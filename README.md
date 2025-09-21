@@ -72,6 +72,7 @@ ORDER BY t.total_duration DESC;
 This query computes total streaming duration per listener and ranks them. ROW_NUMBER gives a strict ordering; RANK allows ties (with gaps); DENSE_RANK compresses gaps; PERCENT_RANK shows relative standing. You can use these results for identifying your top listeners for rewards, or a VIP program. 
 ### Aggregate — SUM(), AVG(), MIN(), MAX() (ROWS vs RANGE)
 **SQL Query (Running Totals & Moving Average):**
+```sql
 WITH monthly AS (
   SELECT TRUNC(stream_date,'MM') AS month,
          SUM(duration) AS monthly_total
@@ -96,7 +97,7 @@ FROM monthly
 ORDER BY month;
 ```
 **Screenshot:**
-![Aggregate Results](
+![Aggregate Results](https://github.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/blob/main/aggregate.PNG?raw=true)
 
 
 
