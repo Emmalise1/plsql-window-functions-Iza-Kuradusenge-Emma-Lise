@@ -152,7 +152,11 @@ FROM (
 ORDER BY t.total_duration DESC;
 ```
 **Screenshot:**
-![Distribution Results](
+![Distribution Results](https://github.com/Emmalise1/plsql-window-functions-Iza-Kuradusenge-Emma-Lise/blob/main/distribution.PNG?raw=true000)
+
+**Interpretation**
+This segregates listeners into quartiles based on their total time streamed using NTILE(4). CUME_DIST calculates the proportion of listeners at or below a certain total time streamed. This is beneficial in identifying top listeners as well as those users who engage with your content the least in order to target them with messages.
+
 
 
 
